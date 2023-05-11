@@ -1,0 +1,42 @@
+texto = '''O cantor e compositor, Lewis Capaldi, nasceu no dia 7 de outubro de 1996, em Glasgow, Escócia, ele é considerado um prodígio musical, pois aprendeu a tocar bateria e violão quando tinha apenas dois anos de idade e começou a carreira aos 9 anos cantando em pubs. Constantemente o artista está no Top 10 da Antena 1.
+
+Lewis foi descoberto por seu empresário Ryan Walter, após lançar uma música no SoundCloud, gravada em seu celular no próprio quarto. A estreia do cantor ocorreu em 2017, quando publicou a gravação estendida Bloom, trabalhando em conjunto com o produtor vencedor de um Grammy Award, Malay.
+
+Em decorrência do sucesso de sua música, pouco tempo depois ele assinou um contrato com a distribuidora britânica Virgin EMI Records e com a norte-americana Capitol Records. Capaldi chegou a ser nomeado um dos artistas do Vevo no ‘Artists to Watch 2018’.
+
+Ao participar de duas turnês entre 2017 e 2018, uma com Rag’n’Bone Man e outra com Milki Chance, o cantor atraiu a atenção de várias celebridades como Chloë Grace Moretz, Kygo, James Bay, Ellie Goulding e Niall Horan. Em maio de 2018, ele ainda chegou a realizar a turnê europeia The Thrill of It All, com o Sam Smith.
+
+Capaldi já marcou presença em vários festivais, como o Lollapalooza, Bonnaroo, Firefly, Mountain Jam, Osheaga, Reading & Leeds Festival, Rize e TRNSMT. O lançamento do álbum de estúdio Divinely Uninspired to a Hellish Extent, ocorreu em 2019 e ficou durante seis semanas nas paradas de sucesso britânicas, além disso se tornou o álbum mais vendido no Reino Unido em cinco anos.
+
+Após o sucesso do seu primeiro álbum de estúdio, o artista foi indicado ao prêmio Brit Critics’ Choice Award, mas perdeu para Sam Fender. Em junho de 2019, Lewis afirmou em entrevista para o canal do YouTube da produtora Live Nation, que suas maiores influências no mundo da música são Bob Dylan, The Maccabees, Paulo Nutini e Kings of Leon 
+'''
+
+# Remove caracteres especiais e transforma todas as letras em minúsculas
+texto = texto.lower().replace(".", "").replace(",", "").replace(":", "").replace(";", "").replace("!", "").replace("?", "").replace("-", "")
+
+# Separa o texto em uma lista de palavras
+palavras = texto.split()
+
+print('Lista... \n')
+print(palavras)
+print()
+
+# Cria um dicionário para armazenar a contagem de cada palavra
+contagem = {}
+
+#
+# CRIE O DICIONÁRIO CONTAGEM AQUI ----------------------------------------------
+#
+for palavra in palavras:
+    if palavra in contagem:
+        contagem[palavra] += 1
+    else:
+        contagem[palavra] = 1
+
+#
+#-------------------------------------------------------------------------------
+#
+
+# Imprime a contagem de cada palavra
+print('contagem... \n')
+print(contagem)
